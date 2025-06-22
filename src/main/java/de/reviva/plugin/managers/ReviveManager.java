@@ -159,9 +159,9 @@ public class ReviveManager {
     public int getRevivablePlayersCount(Player player) {
         int count = 0;
         
-        for (UUID playerId : plugin.getServer().getBannedPlayers().stream()
-                .map(banned -> banned.getUniqueId()).toList()) {
-            if (canRevivePlayer(player, playerId)) {
+        // Durch alle gebannten Spieler iterieren
+        for (OfflinePlayer banned : plugin.getServer().getBannedPlayers()) {
+            if (canRevivePlayer(player, banned.getUniqueId())) {
                 count++;
             }
         }
