@@ -3,12 +3,12 @@ package de.reviva.plugin.managers;
 import de.reviva.plugin.Reviva;
 import org.bukkit.BanList;
 import org.bukkit.ChatColor;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
-import org.bukkit.OfflinePlayer;
 import java.util.UUID;
 
 public class ReviveManager {
