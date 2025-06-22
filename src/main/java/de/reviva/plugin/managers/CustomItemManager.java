@@ -171,7 +171,7 @@ public class CustomItemManager {
         );
         
         meta.setLore(lore);
-        meta.addEnchant(Enchantment.UNBREAKING, 1, true);
+        meta.addEnchant(Enchantment.DURABILITY, 1, true);
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         meta.getPersistentDataContainer().set(PHANTOM_FEDER_KEY, PersistentDataType.STRING, "phantom_feder");
         
