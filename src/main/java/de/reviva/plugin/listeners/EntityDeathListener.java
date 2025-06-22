@@ -2,13 +2,8 @@ package de.reviva.plugin.listeners;
 
 import de.reviva.plugin.Reviva;
 import org.bukkit.entity.*;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.EventPriority;
-import org.bukkit.event.Listener;
-import org.bukkit.event.entity.EntityDeathEvent;
-import org.bukkit.inventory.ItemStack;
 
-import java.util.Random;
+import java.util.UUID;
 
 public class EntityDeathListener implements Listener {
     
