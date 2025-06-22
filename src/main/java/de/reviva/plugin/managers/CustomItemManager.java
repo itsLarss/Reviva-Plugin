@@ -223,14 +223,20 @@ public class CustomItemManager {
      * @return NamespacedKey
      */
     private NamespacedKey getKeyForItemType(String itemType) {
-        return switch (itemType) {
-            case "heart_of_return" -> REVIVA_ITEM_KEY;
-            case "glut_essenz" -> GLUT_ESSENZ_KEY;
-            case "kristall_traene" -> KRISTALL_TRAENE_KEY;
-            case "seelen_blatt" -> SEELEN_BLATT_KEY;
-            case "phantom_feder" -> PHANTOM_FEDER_KEY;
-            default -> REVIVA_ITEM_KEY;
-        };
+        switch (itemType) {
+            case "heart_of_return":
+                return REVIVA_ITEM_KEY;
+            case "glut_essenz":
+                return GLUT_ESSENZ_KEY;
+            case "kristall_traene":
+                return KRISTALL_TRAENE_KEY;
+            case "seelen_blatt":
+                return SEELEN_BLATT_KEY;
+            case "phantom_feder":
+                return PHANTOM_FEDER_KEY;
+            default:
+                return REVIVA_ITEM_KEY;
+        }
     }
     
     /**
