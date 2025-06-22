@@ -1,7 +1,7 @@
 name: Reviva
 version: 1.0.0
 main: de.reviva.plugin.Reviva
-api-version: 1.21
+api-version: 1.20
 author: RevivaTeam
 description: Ein virtuelles Herz- und Wiederbelebungssystem für Minecraft
 website: https://example.com
