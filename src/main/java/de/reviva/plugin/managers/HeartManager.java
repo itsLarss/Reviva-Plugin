@@ -96,8 +96,8 @@ public class HeartManager {
         
         Player player = plugin.getServer().getPlayer(playerId);
         if (player != null) {
-            player.sendMessage(ChatColor.RED + hearts + " Herzen wurden entfernt! " +
-                             ChatColor.YELLOW + "Verbleibende Herzen: " + ChatColor.RED + newHearts);
+            player.sendMessage(ChatColor.RED + String.valueOf(hearts) + " Herzen wurden entfernt! " +
+                             ChatColor.YELLOW + "Verbleibende Herzen: " + ChatColor.RED + String.valueOf(newHearts));
             
             // Wenn 0 Herzen, bannen
             if (newHearts == 0) {
