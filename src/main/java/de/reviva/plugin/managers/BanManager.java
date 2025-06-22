@@ -33,7 +33,7 @@ public class BanManager {
         
         // Minecraft-Bann setzen
         BanList banList = plugin.getServer().getBanList(BanList.Type.NAME);
-        banList.addBan(playerName, reason, null, "Reviva-System");
+        banList.addBan(playerName, reason, (Date) null, "Reviva-System");
         
         // Spieler kicken falls online
         if (player != null && player.isOnline()) {
