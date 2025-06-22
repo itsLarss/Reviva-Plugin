@@ -25,11 +25,12 @@ public class EntityDeathListener implements Listener {
         Entity entity = event.getEntity();
         
         // Nur von Spielern getötete Mobs
-        if (!(entity.getKiller() instanceof Player)) {
-            return;
-        }
-        
-        Player killer = entity.getKiller();
+        if (entity instanceof LivingEntity) {
+            LivingEntity livingEntity = (LivingEntity) entity;
+            if (!(livingEntity.getKiller() instanceof Player)) {
+                return;
+            }
+            Player killer = livingEntity.getKiller();
         
         // Custom Item Drops basierend auf Mob-Typ
         handleCustomDrops(event, entity, killer);
