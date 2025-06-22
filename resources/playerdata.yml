@@ -1,0 +1,12 @@
+# Reviva Plugin - Spielerdaten
+# Diese Datei speichert alle Herzen, Wiederbelebungen und Bann-Status
+
+players:
+  # Beispiel:
+  # 550e8400-e29b-41d4-a716-446655440000:
+  #   hearts: 2
+  #   revives_used: 1
+  #   banned: false
+
+revive_settings:
+  last_revive_timestamp: "2025-01-01T00:00:00"
