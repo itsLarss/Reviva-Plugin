@@ -1,0 +1,81 @@
+name: Reviva
+version: 1.0.0
+main: de.reviva.plugin.Reviva
+api-version: 1.21
+author: RevivaTeam
+description: Ein virtuelles Herz- und Wiederbelebungssystem für Minecraft
+website: https://example.com
+
+commands:
+  reviva:
+    description: Hauptbefehl für Reviva Plugin
+    usage: /reviva <subcommand>
+    permission: reviva.admin
+    aliases: [rv, hearts]
+  hearts:
+    description: Zeigt Herzstatus eines Spielers
+    usage: /hearts [player]
+    permission: reviva.status.check
+  revive:
+    description: Wiederbelebungs-GUI öffnen
+    usage: /revive
+    permission: reviva.revive.gui
+
+permissions:
+  reviva.admin:
+    description: Vollzugriff auf alle Reviva-Funktionen
+    default: op
+    children:
+      reviva.revive.use: true
+      reviva.revive.bypasscooldown: true
+      reviva.revive.bypasslimit: true
+      reviva.revive.gui: true
+      reviva.status.check: true
+      reviva.hearts.set: true
+      reviva.hearts.viewall: true
+      reviva.join.bypassdeath: true
+      reviva.death.immune: true
+      reviva.revive.immune: true
+
+  reviva.revive.use:
+    description: Erlaubt die Verwendung des "Herz der Rückkehr" Items
+    default: true
+
+  reviva.revive.bypasscooldown:
+    description: Ignoriert den 12-Stunden Cooldown für Wiederbelebungen
+    default: op
+
+  reviva.revive.bypasslimit:
+    description: Erlaubt mehr als 2 Wiederbelebungen pro Spieler
+    default: op
+
+  reviva.revive.gui:
+    description: Zugriff auf die Wiederbelebungs-GUI
+    default: true
+
+  reviva.status.check:
+    description: Herzstatus von Spielern anzeigen
+    default: true
+
+  reviva.hearts.set:
+    description: Herzen von Spielern manuell setzen
+    default: op
+
+  reviva.hearts.viewall:
+    description: Herzstatus aller Spieler anzeigen
+    default: op
+
+  reviva.join.bypassdeath:
+    description: Server beitreten trotz Tod (0 Herzen)
+    default: op
+
+  reviva.death.immune:
+    description: Immun gegen Herzverlust beim Tod
+    default: op
+
+  reviva.revive.immune:
+    description: Kann nicht wiederbelebt werden
+    default: false
+
+depend: []
+softdepend: [LuckPerms, Vault]
