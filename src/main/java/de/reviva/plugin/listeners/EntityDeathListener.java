@@ -32,9 +32,10 @@ public class EntityDeathListener implements Listener {
                 return;
             }
             Player killer = livingEntity.getKiller();
-        
-        // Custom Item Drops basierend auf Mob-Typ
-        handleCustomDrops(event, entity, killer);
+            
+            // Custom Item Drops basierend auf Mob-Typ
+            handleCustomDrops(event, entity, killer);
+        }
     }
     
     private void handleCustomDrops(EntityDeathEvent event, Entity entity, Player killer) {
